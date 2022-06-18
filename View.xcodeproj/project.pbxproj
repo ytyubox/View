@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D238EF08285E27BB00E3EB43 /* ep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238EF07285E27BB00E3EB43 /* ep1.swift */; };
+		D238EF09285E27BB00E3EB43 /* ep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238EF07285E27BB00E3EB43 /* ep1.swift */; };
 		D28AAFB0285E1A76004B2AB2 /* ViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28AAFA0285E1A75004B2AB2 /* ViewApp.swift */; };
 		D28AAFB1285E1A76004B2AB2 /* ViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28AAFA0285E1A75004B2AB2 /* ViewApp.swift */; };
 		D28AAFB2285E1A76004B2AB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28AAFA1285E1A75004B2AB2 /* ContentView.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D238EF07285E27BB00E3EB43 /* ep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ep1.swift; sourceTree = "<group>"; };
 		D28AAFA0285E1A75004B2AB2 /* ViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewApp.swift; sourceTree = "<group>"; };
 		D28AAFA1285E1A75004B2AB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D28AAFA2285E1A76004B2AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			children = (
 				D28AAFA0285E1A75004B2AB2 /* ViewApp.swift */,
 				D28AAFA1285E1A75004B2AB2 /* ContentView.swift */,
+				D238EF07285E27BB00E3EB43 /* ep1.swift */,
 				D28AAFA2285E1A76004B2AB2 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -178,6 +182,7 @@
 			files = (
 				D28AAFB2285E1A76004B2AB2 /* ContentView.swift in Sources */,
 				D28AAFB0285E1A76004B2AB2 /* ViewApp.swift in Sources */,
+				D238EF08285E27BB00E3EB43 /* ep1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +192,7 @@
 			files = (
 				D28AAFB3285E1A76004B2AB2 /* ContentView.swift in Sources */,
 				D28AAFB1285E1A76004B2AB2 /* ViewApp.swift in Sources */,
+				D238EF09285E27BB00E3EB43 /* ep1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
