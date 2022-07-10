@@ -22,8 +22,9 @@ struct ContentView: View {
   @State var opacity: Double = 0.5
   var sample: some View_ {
     Ellipse_()
-           .frame(width: 200, height: 100)
-           .frame(width: 300, height: 50)
+      .frame(width: 200, height: 100)
+      .border(NSColor.blue, width: 3)
+      .frame(width: 300, height: 50)
   }
 
   var body: some View {
@@ -34,7 +35,11 @@ struct ContentView: View {
         sample.swiftUI.frame(width: size.width, height: size.height)
           .opacity(opacity)
       }
-      Slider(value: $opacity, in: 0 ... 1)
+      HStack {
+        Text("View_")
+        Slider(value: $opacity, in: 0 ... 1)
+        Text("SwiftUI")
+      }.padding()
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
@@ -43,6 +48,34 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
+  }
+}
+
+extension View_ {
+  func border(_ color: NSColor, width: CGFloat) -> some View_ {
+    Border(color: color, width: width, content: self)
+  }
+}
+
+struct Border<Content: View_>: View_, BuiltinView {
+  var color: NSColor
+  var width: CGFloat
+  var content: Content
+
+  func size(proposed: ProposedSize) -> CGSize {
+    content._size(proposed: proposed)
+  }
+
+  func render(context: RenderingContext, size: CGSize) {
+    content._render(context: context, size: size)
+    context.saveGState()
+    context.setStrokeColor(color.cgColor)
+    context.stroke(CGRect(origin: .zero, size: size).insetBy(dx: width/2, dy: width/2), width: width)
+    context.restoreGState()
+  }
+
+  var swiftUI: some View {
+    content.swiftUI.border(Color(color), width: width)
   }
 }
 
